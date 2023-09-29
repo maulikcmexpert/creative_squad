@@ -217,6 +217,7 @@
         .modal-main-wrp .iti--separate-dial-code .iti__selected-flag {
             border-radius: 90px 0px 0px 90px;
             background-color: #E9B6FF !important;
+            height: 45px;
         }
 
         .modal-main-wrp .iti--separate-dial-code .iti__selected-dial-code {
