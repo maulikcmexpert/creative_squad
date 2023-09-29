@@ -1,0 +1,214 @@
+.main-sidebar .sidebar-brand{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    height:70px;
+    line-height:25px
+}
+.main-sidebar .sidebar-brand.sidebar-brand-sm{
+    display:none
+}
+.main-sidebar .sidebar-brand a{
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:700;
+    font-size:23px;
+    vertical-align:bottom;
+    color:#000
+}
+.main-sidebar .sidebar-brand a .header-logo{
+    height:25px
+}
+.main-sidebar .sidebar-brand a .logo-name{
+    vertical-align:middle;
+    font-size:20px
+}
+.main-sidebar .sidebar-user{
+    display:inline-block;
+    width:100%;
+    padding:10px;
+    text-align:center
+}
+.main-sidebar .sidebar-user .sidebar-user-picture{
+    margin-right:10px
+}
+.main-sidebar .sidebar-user .sidebar-user-picture img{
+    width:60px;
+    border-radius:20%
+}
+.main-sidebar .sidebar-user .sidebar-user-details .user-name{
+    white-space:nowrap;
+    -o-text-overflow:ellipsis;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    margin-top:7px;
+    margin-bottom:3px;
+    font-weight:600;
+    color:#505c66
+}
+.main-sidebar .sidebar-user .sidebar-user-details .user-role{
+    font-weight:400;
+    color:#868e96;
+    font-size:10px;
+    letter-spacing:0.5px
+}
+.main-sidebar .sidebar-menu{
+    padding:0;
+    margin:0
+}
+.main-sidebar .sidebar-menu li{
+    display:block
+}
+.main-sidebar .sidebar-menu li.menu-header{
+    padding:3px 15px;
+    color:#868e96;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1.3px;
+    font-weight:600
+}
+.main-sidebar .sidebar-menu li.menu-header:not(:first-child){
+    margin-top:10px
+}
+.main-sidebar .sidebar-menu li a{
+    position:relative;
+    display:flex;
+    align-items:center;
+    height:50px;
+    padding:0 20px;
+    width:100%;
+    letter-spacing:0.3px;
+    color:#60686f;
+    font-weight:600;
+    text-decoration:none
+}
+.main-sidebar .sidebar-menu li a .badge{
+    float:right;
+    padding:5px 10px;
+    margin-top:2px
+}
+.main-sidebar .sidebar-menu li a i{
+    width:28px;
+    font-size:15px;
+    margin-right:10px;
+    text-align:center
+}
+.main-sidebar .sidebar-menu li a .feather{
+    height:20px;
+    width:20px;
+    margin-right:10px;
+    text-align:center
+}
+.main-sidebar .sidebar-menu li a span{
+    margin-top:3px;
+    width:100%
+}
+.main-sidebar .sidebar-menu li a:hover{
+    background-color:#fcfcfd
+}
+.main-sidebar .sidebar-menu li.active a{
+    color:#6777ef;
+    font-weight:600;
+    background-color:#fcfcfd
+}
+.main-sidebar .sidebar-menu li.active ul.dropdown-menu{
+    background-color:#fcfcfd
+}
+.main-sidebar .sidebar-menu li a.has-dropdown:after{
+    content:"";
+    font-family:"Font Awesome 5 Free";
+    font-weight:900;
+    position:absolute;
+    top:50%;
+    right:20px;
+    -webkit-transform:translate(0, -50%);
+    transform:translate(0, -50%);
+    font-size:14px
+}
+.main-sidebar .sidebar-menu li.active>ul.dropdown-menu{
+    display:block
+}
+.main-sidebar .sidebar-menu li.active>ul.dropdown-menu li a:hover{
+    background-color:#fcfcfd
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu{
+    padding:0;
+    margin:0;
+    display:none;
+    position:static;
+    float:none;
+    width:100%;
+    box-shadow:none;
+    background-color:transparent
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a{
+    color:#60686f;
+    height:35px;
+    padding-left:50px;
+    font-weight:400
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a:hover{
+    color:#6777ef;
+    background-color:inherit
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a:hover:before{
+    color:#6777ef;
+    font-weight:600;
+    left:35px
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a:before{
+    content:"\f105";
+    font-family:"Font Awesome 5 Free";
+    font-weight:900;
+    font-size:12px;
+    position:absolute;
+    transition:0.5s;
+    left:30px;
+    color:#868e96
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu li.active>a{
+    color:#6777ef;
+    font-weight:600
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu li.active>a:before{
+    color:#6777ef;
+    font-weight:600
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a i{
+    margin-top:1px;
+    text-align:center
+}
+.main-sidebar .sidebar-menu li ul.dropdown-menu li ul.dropdown-menu{
+    padding-left:10px
+}
+.main-content{
+    padding-left:280px;
+    padding-right:30px;
+    padding-top:130px;
+    width:100%;
+    position:relative
+}
+.main-footer{
+    padding:20px 30px 20px 280px;
+    margin-top:40px;
+    color:#98a6ad;
+    border-top:1px solid #e3eaef;
+    display:inline-block;
+    background:#ffffff;
+    font-weight:600;
+    text-transform:uppercase;
+    font-size:11px;
+    width:100%
+}
+.main-footer .footer-left{
+    float:left
+}
+.main-footer .footer-right{
+    float:right
+}
+.simple-footer{
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:40px
+}

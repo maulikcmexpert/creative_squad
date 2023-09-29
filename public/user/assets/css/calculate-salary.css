@@ -1,0 +1,1457 @@
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+
+@font-face {
+  font-family: "Gordita-Black";
+  src: url("../fonts/Gordita-Black.woff") format("woff2"),
+    url("../fonts/Gordita-Black.woff") format("woff");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Gordita-Bold";
+  src: url("../fonts/Gordita-Bold.woff") format("woff2"),
+    url("../fonts/Poppins-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Gordita-Medium";
+  src: url("../fonts/Gordita-Medium.woff") format("woff2"),
+    url("../fonts/Gordita-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita-Light";
+  src: url("../fonts/Gordita-Light.woff") format("woff2"),
+    url("../fonts/Gordita-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita-Regular";
+  src: url("../fonts/Gordita-Regular.woff") format("woff2"),
+    url("../fonts/Gordita-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+:root {
+  --Gordita-bold: "Gordita-Bold";
+  --Gordita-medium: "Gordita-Medium";
+  --Gordita-black: "Gordita-Black";
+  --Gordita-light: "Gordita-Light";
+  --Gordita-regular: "Gordita-Regular";
+  --Marck-script-regular: "Marck Script", "cursive";
+  --primary: #5f0087;
+  --secondry: #e9b6ff;
+  --pink-bg: #e9b6ff;
+  --secondry-pink: #d87eff;
+  --light-pink: rgba(247, 229, 255, 0.8);
+  --light-gray: #685d6d;
+  --third-pink: #f7e5ff;
+  --dark-gray: #740f9f;
+  --white: #ffffff;
+  --light-blue: #17a0e4;
+  --light-green: #91b854;
+  --perple: #6c71c8;
+  --gradient: linear-gradient(
+    360deg,
+    #f6e2ff -15.22%,
+    rgba(246, 226, 255, 0) 100%
+  );
+}
+
+.p-100 {
+  padding: 100px 0px;
+}
+
+li {
+  list-style: none;
+}
+
+/* -----csss---start-here--- */
+
+/* ----banner-css------ */
+.hero-section {
+  background-image: url("../img/banner/banner-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-content h1 {
+  color: var(--white);
+  max-width: 595px;
+  margin-bottom: 30px;
+  font-family: var(--Gordita-bold);
+  font-size: 54px;
+}
+
+.hero-content span {
+  color: var(--secondry);
+}
+
+.hero-content p {
+  color: var(--third-pink);
+  max-width: 550px;
+}
+
+.hero-section .hero-img {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section .hero-img > img {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+
+.apply-job a {
+  color: var(--secondry);
+  transition: 0.5s;
+}
+
+.apply-job a:hover {
+  color: #fff;
+}
+
+.earth-circle-img {
+  width: 100%;
+  top: 650px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: circle-rotate 150s linear infinite;
+  -webkit-animation: circle-rotate 150s linear infinite;
+  /* z-index: 99; */
+}
+
+.calculate-banner .earth-circle-img {
+  top: 750px !important;
+}
+
+@keyframes circle-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-405deg);
+  }
+}
+
+.calculate-banner .hero-content a {
+  background: #ffffff;
+  box-shadow: 0px 10px 30px rgba(194, 127, 27, 0.1);
+  border-radius: 90px;
+  color: #5f0087 !important;
+  text-decoration: none;
+  padding: 15px 35px;
+  font-family: var(--Gordita-bold);
+  font-size: 16px;
+  font-weight: 700 !important;
+  line-height: 13px;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+
+.calculate-banner .banner-images img {
+  display: block;
+  margin: 0px auto;
+}
+
+.calculate-banner .banner-images .banner-dev-img1 {
+  top: 100px;
+  left: 0;
+}
+
+.calculate-banner .banner-images .banner-dev-img2 {
+  top: 0;
+  right: 0;
+}
+
+/* ----proffesion-css---- */
+.proffesion-wrapper {
+  width: 100%;
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid var(--secondry);
+  background: var(--white);
+  position: relative;
+  margin-bottom: 50px !important;
+  position: relative;
+}
+
+.proffesion-sub-category {
+  padding: 20px 15px;
+  border: 1px solid var(--secondry);
+  background: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.proffesion-sub-category {
+  flex-basis: 23% !important;
+}
+
+.techno-check {
+  flex-basis: 23% !important;
+}
+
+.sub-category-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.proffesion-sub-category {
+  flex-basis: 31% !important;
+  position: relative;
+  transition: 0.3s;
+}
+
+.proffesion-wrapper h2 {
+  font-family: var(--Gordita-medium);
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.proffesion-sub-category h4 {
+  font-family: var(--Gordita-medium);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  color: rgba(104, 93, 109, 0.7) !important;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+/* ---chack-box-css--- */
+.techno-check {
+  position: relative;
+}
+
+.techno_checkbox {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  cursor: pointer;
+  border-radius: 10px !important;
+}
+
+.sub-category-wrapper .techno_checkbox:checked ~ .proffesion-sub-category {
+  background: #e9b6ff;
+  box-shadow: 4px 8px 25px rgba(95, 0, 135, 0.2);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.sub-category-wrapper .techno_checkbox:checked ~ .proffesion-sub-category h4 {
+  color: #5f0087 !important;
+  font-family: Gordita;
+  font-size: 16px;
+  /* font-weight: 700; */
+  line-height: 21px;
+}
+
+/* --------right-side-part-- */
+.common-salary-wrapper {
+  background: linear-gradient(
+    0deg,
+    #e9b6ff -2.71%,
+    rgba(233, 182, 255, 0.839198) 44.69%,
+    rgba(233, 182, 255, 0.63) 106.35%
+  );
+  border: 1px solid #e9b6ff;
+  border-radius: 20px;
+  padding: 40px 90px;
+  text-align: center;
+  position: relative;
+}
+
+.monthly-salary-wapper {
+  margin-bottom: 50px;
+}
+
+.total-salary-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.common-salary-wrapper h4 {
+  font-family: var(--Gordita-medium);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.common-salary-wrapper h3 {
+  font-family: var(--Gordita-black);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 48px;
+  color: var(--primary);
+  margin-bottom: -5px;
+}
+
+.cost-wrap h3{
+  font-size: 35px;
+}
+
+.hire-now-btn {
+  margin-top: 40px !important;
+  position: relative;
+  transition: 0.3s;
+}
+
+.hire-now-btn a {
+  padding: 15px 25px;
+  background: var(--white);
+  color: var(--primary);
+  font-family: var(--Gordita-bold);
+  box-shadow: 0px 10px 30px rgba(194, 127, 27, 0.1);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 13px;
+  box-shadow: 0px 10px 30px rgba(194, 127, 27, 0.1);
+  border-radius: 90px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hire-now-btn:hover {
+  transform: translateX(5px);
+}
+
+.monthly-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.montly-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.common-clculate-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.proffection-1-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.top-left-circle-img {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  z-index: -1;
+}
+
+.bottom-right-circle-img {
+  position: absolute;
+  right: 0;
+  bottom: -340px;
+  z-index: -1;
+  width: 100%;
+  max-width: 500px;
+}
+
+.calculate-salary-section {
+  position: relative;
+}
+
+/* new-css */
+.total-salary-wrapper#salary_wage .monthly-top-right {
+  max-width: 150px;
+}
+
+/* footer-top */
+.footer-top {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -120px;
+}
+
+.footer-top .container {
+  max-width: 1096px;
+  background-color: var(--pink-bg);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  color: var(--white);
+}
+
+.black-btn {
+  background: rgba(95, 0, 135, 1) !important;
+  color: var(--white) !important;
+  margin: 15px 0 !important;
+}
+
+.footer-top-content {
+  padding-left: 30px;
+}
+
+.footer-top-content h3 {
+  font-family: var(--Gordita-bold);
+  max-width: 560px;
+  color: var(--primary);
+}
+
+.footer-top-img {
+  margin-top: 20px;
+}
+
+/* footer-bottom */
+.footer-bottom {
+  background-color: var(--primary);
+  padding-top: 240px;
+  /* padding-bottom: 100px; */
+}
+
+.footer-social-icons li {
+  margin-right: 15px;
+}
+
+.footer-social-icons li:last-child {
+  margin-right: 0;
+  margin-left: -5px;
+  margin-top: -2px;
+}
+
+.footer-social-icons h5 {
+  margin-bottom: 15px;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links li a {
+  color: var(--light-pink);
+  font-size: 16px;
+  font-family: var(--Gordita-regular);
+}
+
+.footer-bottom h4 {
+  font-family: var(--Gordita-medium);
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+.footer-bottom p {
+  color: var(--light-pink);
+}
+
+.footer-bottom .col-xxl-3:nth-child(2) {
+  padding-left: 85px;
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-bottom h5 {
+  font-size: 20px;
+  font-family: var(--Gordita-bold);
+  color: var(--white);
+}
+
+.footer-copyright {
+  background-color: #6d0f95;
+  border-radius: 90px;
+  padding: 15px 48px;
+  margin: 89px 0 49px;
+}
+
+.footer-copyright a {
+  font-size: 16px;
+  font-family: var(--Gordita-regular);
+  color: var(--white);
+}
+
+.footer-copyright a:hover {
+  color: var(--white);
+}
+
+.footer-top-content .black-btn {
+  color: var(--white) !important;
+}
+
+.clculate-footer-bottom .footer-logo img {
+  margin: 0px auto;
+  display: block;
+}
+
+.clculate-footer-bottom .col-xxl-4 > p {
+  max-width: 300px !important;
+}
+
+.clculate-footer-bottom h4 {
+  font-family: Gordita !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 32px !important;
+  text-transform: capitalize;
+}
+
+.clculate-footer-top .footer-top-content a {
+  background-color: var(--secondry);
+  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 90px;
+  color: var(--primary) !important;
+  font-family: var(--Gordita-bold);
+  border: none;
+  margin: 30px 0;
+  transition: 0.5s;
+  color: #fff !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.clculate-footer-top .footer-top-content h3 {
+  font-family: var(--Gordita-bold);
+  max-width: 560px;
+  color: var(--primary);
+  font-size: 32px !important;
+  font-weight: bold;
+}
+
+.calculate-footer-copyright a {
+  text-decoration: none;
+}
+
+.button_tabs {
+  display: flex;
+  padding: 20px 10px;
+  border-radius: 20px;
+  /* border: 1px solid var(--secondry); */
+  background: var(--white);
+  margin-bottom: 0px;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 0px;
+}
+
+.button_tabs button {
+  background-color: #fff;
+  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 10px;
+  border: 1px solid var(--secondry) !important;
+  color: var(--primary) !important;
+  font-family: var(--Gordita-bold);
+  border: none;
+  transition: 0.5s;
+  transform: translateY(0);
+  /* width: 100%; */
+  /* max-width: 319px; */
+  flex-basis: 48%;
+  display: block;
+}
+
+.button_tabs button.active {
+  background-color: var(--primary);
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* last-css*/
+
+/*.total-salary-wrapper .cost-box{
+  border: 1px solid #D87EFF;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+}*/
+
+.cost-box h2{
+  font-size: 25px;
+  color: #000;
+  font-family: var(--Gordita-medium);
+  margin-top: 15px;
+}
+
+.cost-pr h5 {
+    color: #ff4343;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.cost-pr{
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+
+.clculate-footer-bottom img {
+  /* width: 100%; */
+  max-width: 250px;
+}
+
+.clculate-footer-bottom {
+  background-color: var(--primary);
+  padding-top: 100px !important;
+}
+
+.clculate-footer-bottom .col-md-6:nth-child(3) {
+  padding-left: 40px;
+}
+
+/* .calculate-salary-section ul{
+  text-align: left;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.calculate-salary-section ul li{
+  list-style-type: decimal !important;
+  list-style-position: inside !important;
+} */
+
+font{
+  box-shadow: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+#goog-gt-{
+  visibility: hidden !important;
+}
+
+.mon-list span{
+  font-size: 14px;
+  /* font-family: var(--Gordita-regular); */
+}
+
+/* ===== RESPONSIVE ===== */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .proffesion-sub-category {
+    padding: 20px 15px !important;
+  }
+
+  .sub-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px !important;
+  }
+
+  .common-salary-wrapper {
+    background: linear-gradient(
+      0deg,
+      #e9b6ff -2.71%,
+      rgba(233, 182, 255, 0.839198) 44.69%,
+      rgba(233, 182, 255, 0.63) 106.35%
+    );
+    border: 1px solid #e9b6ff;
+    border-radius: 20px;
+    padding: 40px 60px;
+    text-align: center;
+    position: relative;
+  }
+
+  .main-proffesion .proffesion-sub-category {
+    flex-basis: 23.7% !important;
+  }
+
+  .main-proffesion .techno-check {
+    flex-basis: 23.7% !important;
+  }
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 13px !important;
+    font-weight: 700;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .proffesion-sub-category {
+    padding: 20px 15px;
+  }
+
+  .common-salary-wrapper {
+    background: linear-gradient(
+      0deg,
+      #e9b6ff -2.71%,
+      rgba(233, 182, 255, 0.839198) 44.69%,
+      rgba(233, 182, 255, 0.63) 106.35%
+    );
+    border: 1px solid #e9b6ff;
+    border-radius: 20px;
+    padding: 40px 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .sub-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px !important;
+  }
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .main-proffesion .proffesion-sub-category {
+    flex-basis: 22.7% !important;
+  }
+
+  .main-proffesion .techno-check {
+    flex-basis: 47.7% !important;
+}
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 13px !important;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .total-salary-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .monthly-salary-wapper {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .proffesion-sub-category {
+    padding: 20px 24px;
+  }
+
+  .common-salary-wrapper {
+    background: linear-gradient(
+      0deg,
+      #e9b6ff -2.71%,
+      rgba(233, 182, 255, 0.839198) 44.69%,
+      rgba(233, 182, 255, 0.63) 106.35%
+    );
+    border: 1px solid #e9b6ff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .sub-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .proffesion-sub-category {
+    flex-basis: 46% !important;
+  }
+
+  .techno-check {
+    position: relative;
+    flex-basis: 46%;
+  }
+
+  .proffesion-wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--secondry);
+    background: var(--white);
+    position: relative;
+    margin-bottom: 50px !important;
+  }
+
+  .proffesion-wrapper h2 {
+    font-family: var(--Gordita-medium);
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+
+  .common-salary-wrapper h3 {
+    font-family: var(--Gordita-black);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 48px;
+    color: var(--primary);
+    margin-bottom: -5px;
+  }
+
+  .main-proffesion .proffesion-sub-category {
+    flex-basis: 22.7% !important;
+  }
+
+  .main-proffesion .techno-check {
+    flex-basis: 31% !important;
+  }
+
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 14px !important;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .total-salary-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px !important;
+  }
+
+  .monthly-salary-wapper {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .proffesion-sub-category {
+    padding: 20px 30px;
+}
+
+  .common-salary-wrapper {
+    background: linear-gradient(
+      0deg,
+      #e9b6ff -2.71%,
+      rgba(233, 182, 255, 0.839198) 44.69%,
+      rgba(233, 182, 255, 0.63) 106.35%
+    );
+    border: 1px solid #e9b6ff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .sub-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .techno-check {
+    flex-basis: 21% !important;
+  }
+
+  .proffesion-wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--secondry);
+    background: var(--white);
+    position: relative;
+    margin-bottom: 50px !important;
+  }
+
+  .proffesion-wrapper h2 {
+    font-family: var(--Gordita-medium);
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+
+  .common-salary-wrapper h3 {
+    font-family: var(--Gordita-black);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 48px;
+    color: var(--primary);
+    margin-bottom: -5px;
+  }
+
+  .main-proffesion .proffesion-sub-category {
+    flex-basis: 30% !important;
+  }
+
+  .main-proffesion .techno-check {
+    flex-basis: 48% !important;
+}
+
+  .top-left-circle-img {
+    display: none;
+  }
+
+  .bottom-right-circle-img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 575px) {
+  .proffesion-sub-category {
+    padding: 20px 24px;
+  }
+
+  .common-salary-wrapper {
+    background: linear-gradient(
+      0deg,
+      #e9b6ff -2.71%,
+      rgba(233, 182, 255, 0.839198) 44.69%,
+      rgba(233, 182, 255, 0.63) 106.35%
+    );
+    border: 1px solid #e9b6ff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .sub-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .proffesion-sub-category {
+    flex-basis: 45% !important;
+  }
+
+  .techno-check {
+    position: relative;
+    flex-basis: 45% !important;
+  }
+
+  .proffesion-wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--secondry);
+    background: var(--white);
+    position: relative;
+    margin-bottom: 50px !important;
+  }
+
+  .proffesion-wrapper h2 {
+    font-family: var(--Gordita-medium);
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+
+  .common-salary-wrapper h3 {
+    font-family: var(--Gordita-black);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 48px;
+    color: var(--primary);
+    margin-bottom: -5px;
+  }
+
+  .top-left-circle-img {
+    display: none;
+  }
+
+  .bottom-right-circle-img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .proffesion-sub-category {
+    padding: 20px 24px;
+  }
+
+  .common-salary-wrapper {
+    background: linear-gradient(
+      0deg,
+      #e9b6ff -2.71%,
+      rgba(233, 182, 255, 0.839198) 44.69%,
+      rgba(233, 182, 255, 0.63) 106.35%
+    );
+    border: 1px solid #e9b6ff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .sub-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .proffesion-sub-category {
+    flex-basis: 100% !important;
+  }
+
+  .techno-check {
+    position: relative;
+    flex-basis: 100% !important;
+  }
+
+  .proffesion-wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--secondry);
+    background: var(--white);
+    position: relative;
+    margin-bottom: 50px !important;
+  }
+
+  .proffesion-wrapper h2 {
+    font-family: var(--Gordita-medium);
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+
+  .common-salary-wrapper h3 {
+    font-family: var(--Gordita-black);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 48px;
+    color: var(--primary);
+    margin-bottom: -5px;
+  }
+
+  .top-left-circle-img {
+    display: none;
+  }
+
+  .bottom-right-circle-img {
+    display: none;
+  }
+  .monthly-salary-info {
+    padding: 20px 0px !important;
+    width: 100% !important;
+  }
+  .monthly-salary-wapper h3 span {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .proffesion-sub-category {
+    padding: 20px 24px;
+  }
+
+  .common-salary-wrapper {
+    background: linear-gradient(
+      0deg,
+      #e9b6ff -2.71%,
+      rgba(233, 182, 255, 0.839198) 44.69%,
+      rgba(233, 182, 255, 0.63) 106.35%
+    );
+    border: 1px solid #e9b6ff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .sub-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .proffesion-sub-category {
+    flex-basis: 100% !important;
+  }
+
+  .techno-check {
+    position: relative;
+    flex-basis: 100% !important;
+  }
+
+  .proffesion-wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--secondry);
+    background: var(--white);
+    position: relative;
+    margin-bottom: 50px !important;
+  }
+
+  .proffesion-wrapper h2 {
+    font-family: var(--Gordita-medium);
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+
+  .common-salary-wrapper h3 {
+    font-family: var(--Gordita-black);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 48px;
+    color: var(--primary);
+    margin-bottom: -5px;
+  }
+
+  .top-left-circle-img {
+    display: none;
+  }
+
+  .bottom-right-circle-img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .proffesion-sub-category {
+    padding: 20px 24px;
+  }
+
+  .common-salary-wrapper {
+    background: linear-gradient(
+      0deg,
+      #e9b6ff -2.71%,
+      rgba(233, 182, 255, 0.839198) 44.69%,
+      rgba(233, 182, 255, 0.63) 106.35%
+    );
+    border: 1px solid #e9b6ff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .sub-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .proffesion-sub-category h4 {
+    font-family: var(--Gordita-medium);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--light-gray) !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .proffesion-sub-category {
+    flex-basis: 100% !important;
+  }
+
+  .techno-check {
+    position: relative;
+    flex-basis: 100% !important;
+  }
+
+  .proffesion-wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--secondry);
+    background: var(--white);
+    position: relative;
+    margin-bottom: 50px !important;
+  }
+
+  .proffesion-wrapper h2 {
+    font-family: var(--Gordita-medium);
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+
+  .common-salary-wrapper h3 {
+    font-family: var(--Gordita-black);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 48px;
+    color: var(--primary);
+    margin-bottom: -5px;
+  }
+
+  .top-left-circle-img {
+    display: none;
+  }
+
+  .bottom-right-circle-img {
+    display: none;
+  }
+}
+
+
+/* --new-media-qaury-- */
+@media only screen and (max-width: 1199px) {
+  .footer-logo img {
+      max-width: 200px;
+  }
+
+  .clculate-footer-bottom h4 {
+      font-size: 18px !important;
+      line-height: 26px !important;
+  }
+
+  .clculate-footer-bottom .col-lg-4:nth-child(3) {
+      padding-left: 40px;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+  .clculate-footer-bottom .footer-logo img {
+      margin: 0 !important;
+      display: block;
+  }
+
+  .clculate-footer-bottom .col-lg-4:nth-child(3) {
+      padding-left: 40px;
+      margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-logo img {
+      max-width: 180px;
+  }
+
+  .calculate-footer-copyright {
+      flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .clculate-footer-bottom .col-lg-4:nth-child(3) {
+      padding-left: 15px;
+      margin-top: 50px;
+  }
+
+  .footer-logo {
+      margin-bottom: 60px;
+  }
+
+  .calculate-footer-copyright {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .calculate-footer-copyright p {
+      font-size: 14px !important;
+  }
+
+  .calculate-footer-copyright a {
+      font-size: 14px !important;
+  }
+
+  .footer-copyright {
+      padding: 15px 20px !important;
+      margin: 30px 0 49px !important;
+  }
+
+}
+
+
+
+
+
+
+/* Monthly salary wrapper */
+
+.monthly-salary-wapper h3 span {
+  background: #5f0087;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #e9b6ff !important;
+  font-size: 30px;
+  margin-right: 26px;
+}
+
+.monthly-salary-wapper h3 a {
+  text-decoration: none;
+}
+
+.monthly-salary-wapper h3 a {
+  color: var(--primary) !important;
+}
+
+.monthly-salary-info {
+  padding: 40px 79px !important;
+}
+
+.calculate-salary-section-2 .top-left-circle-img {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  max-width: 470px;
+}
+
+.calculate-salary-section-2 .bottom-right-circle-img {
+  position: absolute;
+  right: 0;
+  bottom: -340px;
+  z-index: -1;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Yearly salary wrapper */
+
+.yearly-salary-wapper h3 span {
+  background: #5f0087;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #e9b6ff !important;
+  font-size: 30px;
+  margin-right: 26px;
+}
+
+.yearly-salary-wapper h3 a {
+  text-decoration: none;
+}
+
+.yearly-salary-wapper h3 a {
+  color: var(--primary) !important;
+}
+
+.monthly-salary-info {
+  padding: 40px 30px !important;
+}
+
+.calculate-salary-section-2 .top-left-circle-img {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  max-width: 470px;
+}
+
+.calculate-salary-section-2 .bottom-right-circle-img {
+  position: absolute;
+  right: 0;
+  bottom: -340px;
+  z-index: -1;
+  width: 100%;
+  max-width: 450px;
+}
+
+
