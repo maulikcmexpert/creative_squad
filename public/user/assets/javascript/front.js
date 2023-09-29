@@ -182,121 +182,136 @@ function removeMinMax() {
 	$("#frcmaxBase-yearly").html("");
 }
 
-$(document).on("click", "#sentMail", function () {
-	var email = $("#email").val();
-	if (email.length == "") {
-		$(".email_error").html("Please enter email");
-		return false;
-	}
+$(document).ready(function () {
+	$("#requestToConnect").validate({
+		rules: {
+			email: {
+				required: true,
+				email: true,
+			},
+		},
+		messages: {
+			email: {
+				required: "Please enter email",
+				email: "Please enter valid email",
+			},
+		},
+	});
 
-	var profession_id = $('input[name="radioname1"]:checked')
-		.closest(".profession")
-		.data("profession_id");
+	$(document).on("click", "#sentMail", function (e) {
+		e.preventDefault();
 
-	var stack_id = $('input[name="radioname2"]:checked')
-		.closest(".stack")
-		.data("stack_id");
+		if ($("#requestToConnect").valid()) {
+			var email = $("#email").val();
 
-	var tech_id = $('input[name="radioname3"]:checked')
-		.closest(".tech")
-		.data("tech_id");
+			var profession_id = $('input[name="radioname1"]:checked')
+				.closest(".profession")
+				.data("profession_id");
 
-	var experience_id = $('input[name="radioname4"]:checked')
-		.closest(".experience")
-		.data("experience_id");
+			var stack_id = $('input[name="radioname2"]:checked')
+				.closest(".stack")
+				.data("stack_id");
 
-	//  profession,stack,tech,experience //
-	var profession = $('input[name="radioname1"]:checked')
-		.next(".proffesion-sub-category")
-		.find("h4")
-		.text();
+			var tech_id = $('input[name="radioname3"]:checked')
+				.closest(".tech")
+				.data("tech_id");
 
-	var stack = $('input[name="radioname2"]:checked')
-		.next(".proffesion-sub-category")
-		.find("h4")
-		.text();
+			var experience_id = $('input[name="radioname4"]:checked')
+				.closest(".experience")
+				.data("experience_id");
 
-	var tech = $('input[name="radioname3"]:checked')
-		.next(".proffesion-sub-category")
-		.find("h4")
-		.text();
+			//  profession,stack,tech,experience //
+			var profession = $('input[name="radioname1"]:checked')
+				.next(".proffesion-sub-category")
+				.find("h4")
+				.text();
 
-	var experience = $('input[name="radioname4"]:checked')
-		.next(".proffesion-sub-category")
-		.find("h4")
-		.text();
+			var stack = $('input[name="radioname2"]:checked')
+				.next(".proffesion-sub-category")
+				.find("h4")
+				.text();
 
-	//  profession,stack,tech,experience //
+			var tech = $('input[name="radioname3"]:checked')
+				.next(".proffesion-sub-category")
+				.find("h4")
+				.text();
 
-	var activeButton = $(".button_tabs button");
-	var costoftime = "";
-	activeButton.each(function () {
-		if ($(this).hasClass("active")) {
-			costoftime = $(this).attr("buttonid");
+			var experience = $('input[name="radioname4"]:checked')
+				.next(".proffesion-sub-category")
+				.find("h4")
+				.text();
+
+			//  profession,stack,tech,experience //
+
+			var activeButton = $(".button_tabs button");
+			var costoftime = "";
+			activeButton.each(function () {
+				if ($(this).hasClass("active")) {
+					costoftime = $(this).attr("buttonid");
+				}
+			});
+
+			if (
+				profession_id !== undefined &&
+				stack_id !== undefined &&
+				experience_id !== undefined &&
+				costoftime !== undefined &&
+				profession_id.trim() !== "" &&
+				stack_id.trim() !== "" &&
+				experience_id.trim() !== "" &&
+				costoftime.trim() !== ""
+			) {
+				$(this).text("Sending...");
+
+				$(this).attr("disabled", true);
+				$.ajax({
+					method: "POST",
+					url: base_url + "front/sendemail",
+					data: {
+						email: email,
+						profession_id: profession_id,
+						stack_id: stack_id,
+						tech_id: tech_id,
+						experience_id: experience_id,
+						costoftime: costoftime,
+						profession: profession,
+						stack: stack,
+						tech: tech,
+						experience: experience,
+					},
+					success: function (output) {
+						if (output == "true") {
+							$("#sentMail").text("Send");
+							$("#sentMail").attr("disabled", false);
+							resetForm();
+							$(".close").trigger("click");
+							toastr.success(
+								"Email is sent successfully to our representetive",
+								"Success"
+							);
+						} else if (output == "false") {
+							resetForm();
+							$(".close").trigger("click");
+							toastr.error("Something went wrong", "Error");
+						}
+					},
+				});
+			} else {
+				resetForm();
+				$(".close").trigger("click");
+				toastr.error("Please select project details", "Error");
+			}
 		}
 	});
 
-	if (
-		profession_id !== undefined &&
-		stack_id !== undefined &&
-		experience_id !== undefined &&
-		costoftime !== undefined &&
-		profession_id.trim() !== "" &&
-		stack_id.trim() !== "" &&
-		experience_id.trim() !== "" &&
-		costoftime.trim() !== ""
-	) {
-		$(this).text("Sending...");
-
-		$(this).attr("disabled", true);
-		$.ajax({
-			method: "POST",
-			url: base_url + "front/sendemail",
-			data: {
-				email: email,
-				profession_id: profession_id,
-				stack_id: stack_id,
-				tech_id: tech_id,
-				experience_id: experience_id,
-				costoftime: costoftime,
-				profession: profession,
-				stack: stack,
-				tech: tech,
-				experience: experience,
-			},
-			success: function (output) {
-				if (output == "true") {
-					$("#sentMail").text("Send");
-					$("#sentMail").attr("disabled", false);
-					$("#exampleModal").hide();
-					$(".modal-backdrop").remove();
-					toastr.success(
-						"Email is sent successfully to our representetive",
-						"Success"
-					);
-				} else if (output == "false") {
-					$("#exampleModal").hide();
-					$(".modal-backdrop").remove();
-					toastr.error("Something went wrong", "Error");
-				}
-			},
+	$(document).on("click", ".hire", function () {
+		$("#mobile_code").intlTelInput({
+			initialCountry: "fr",
+			separateDialCode: true,
+			// utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
 		});
-	} else {
-		$("#exampleModal").hide();
-		$(".modal-backdrop").remove();
-		toastr.error("Please select project details", "Error");
-	}
-});
-
-$(document).on("click", ".hire", function () {
-	$("#mobile_code").intlTelInput({
-		initialCountry: "fr",
-		separateDialCode: true,
-		// utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
 	});
-});
 
-$(document).ready(function () {
 	$("#contactForm").validate({
 		rules: {
 			name: {
@@ -323,11 +338,11 @@ $(document).ready(function () {
 			},
 			contact_email: {
 				required: "Please enter email",
-				email: true,
+				email: "Please enter valid email",
 			},
 			phone_number: {
 				required: "Please enter phone number",
-				number: true,
+				number: "The value should be a number.",
 			},
 			country: {
 				required: "Please select country",
@@ -354,16 +369,15 @@ $(document).ready(function () {
 						$("#sentContactMail").text("Send Message");
 
 						$("#sentContactMail").attr("disabled", false);
-
-						$("#exampleModal").hide();
-						$(".modal-backdrop").remove();
+						resetForm();
+						$(".close").trigger("click");
 						toastr.success(
 							"Email is sent successfully to our representetive",
 							"Success"
 						);
 					} else if (output == "false") {
-						$("#exampleModal").hide();
-						$(".modal-backdrop").remove();
+						resetForm();
+						$(".close").trigger("click");
 
 						toastr.error("Something went wrong", "Error");
 					}
@@ -371,4 +385,16 @@ $(document).ready(function () {
 			});
 		}
 	});
+});
+
+function resetForm() {
+	$("input").val("");
+	$("textarea").val("");
+	$("#country").prop("selectedIndex", 0);
+}
+
+$(document).on("click", ".close", function () {
+	$("input").val("");
+	$("textarea").val("");
+	$("#country").prop("selectedIndex", 0);
 });
