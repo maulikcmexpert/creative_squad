@@ -15,7 +15,7 @@
 
     <title>calculate-salary</title>
     <style>
-        label .error {
+        label.error {
             color: red !important;
         }
 
@@ -732,20 +732,17 @@
                 </div>
                 <div class="modal-body">
                     <div class="modal-main-wrp modal-main-wrp-1">
-                        <div class="row">
-                            <form action="" id="requestToConnect">
-
+                        <form action="" id="requestToConnect">
+                            <div class="row">
                                 <div class="col-xxl-10 col-lg-9 col-md-9">
                                     <input class="form-control" id="email" type="email" name="email" placeholder="Please enter your email">
-
                                 </div>
                                 <div class="col-xxl-2 col-lg-3 col-md-3">
                                     <button type="button" id="sentMail" class="btn btn-primary">Send</button>
                                 </div>
-                            </form>
-                        </div>
-
-
+                            </div>
+                        </form>
+                        
                     </div>
                     <div class="modal-main-wrp modal-main-wrp-2">
                         <form action="" id="contactForm">
