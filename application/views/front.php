@@ -52,6 +52,7 @@
             align-items: center;
             justify-content: center;
             margin-top: 0px !important;
+            margin-bottom: 0px !important;
         }
 
         .modal-dialog .modal-content {
@@ -237,15 +238,38 @@
             align-items: center;
             gap: 10px;
         }
-        .form-wrp p{
+        .static-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-top: 2px solid #E9B6FF;
+        }
+        /* .modal-main-wrp-2 form .form-wrp:last-child{
+             margin-bottom: 30px !important;
+        } */
+        .textarea-wrp{
+            margin-bottom: 30px !important;
+        }
+
+        .static-content p{
             color: #685D6D;
             font-family: "Gordita";
             font-size: 16px;
             font-weight: 400;
             line-height: 24px;
-            margin-bottom: 5px;
+            margin-bottom: 0px;
         }
-        .form-wrp span, .form-wrp a{
+        .static-content p i{
+            margin-right: 5px;
+        }
+
+        .static-content p:last-child{
+            border-bottom: none;
+        }
+
+        .static-content p span, .static-content p a{
             color: #5F0087;
             font-family: "Gordita";
             font-size: 16px;
@@ -253,6 +277,24 @@
             line-height: 24px;
             text-decoration: none !important;
         } 
+
+        .hire-now-btn button{
+            padding: 15px 25px;
+            background: var(--white) !important;
+            border: transparent;
+            color: var(--primary) !important;
+            font-family: var(--Gordita-bold);
+            box-shadow: 0px 10px 30px rgba(194, 127, 27, 0.1);
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 13px;
+            border-radius: 90px;
+            text-decoration: none;
+        }
+
+        .hire-now-btn button:focus{
+            box-shadow: none !important;
+        }
 
         @media only screen and (max-width: 1199px) {
             .modal-dialog .modal-content {
@@ -683,11 +725,11 @@
                 <div class="modal-body">
                     <div class="modal-main-wrp modal-main-wrp-1">
                         <div class="row">
-                            <div class="col-xxl-10 col-lg-9 col-md-9">
+                            <div class="col-xxl-9 col-lg-8 col-md-8">
                                 <input class="form-control" id="email" type="email" name="email" placeholder="Please enter your email">
                                 <p class="text-danger email_error error"></p>
                             </div>
-                            <div class="col-xxl-2 col-lg-3 col-md-3">
+                            <div class="col-xxl-3 col-lg-4 col-md-4">
                                 <button type="button" id="sentMail" class="btn btn-primary">Send</button>
                             </div>
                         </div>
@@ -717,12 +759,14 @@
                                         <?php } ?>
                                     </select>
                                 </div>
-                                <div class="col-xxl-12 col-lg-12 form-wrp">
+                                <div class="col-xxl-12 col-lg-12 form-wrp textarea-wrp">
                                     <textarea class="form-control" id="message" name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
                                 </div>
-                                <div class="col-xxl-12 col-lg-12 form-wrp">
-                                    <p>Email: <a href="mailto:example@example.com">123@example.com</a></p>
-                                    <p>Telephone: <span>+1 (123) 456-7890</span></p>
+                                <div class="col-xxl-12 col-lg-12">
+                                    <div class="static-content">
+                                        <p><i class="fa-solid fa-envelope"></i> Email: <br> <a href="mailto:example@example.com">123@example.com</a></p>
+                                        <p><i class="fa-solid fa-phone"></i> Telephone: <br> <span>+1 (123) 456-7890</span></p>
+                                    </div>
                                 </div>
 
                             </div>
