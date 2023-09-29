@@ -97,16 +97,17 @@ class Front extends User_Controller
 
 
 		$message = "Email : " . $email . "<br/>
-		Estimation Cost :<br/>
+		<h2>Estimation Cost :</h2><br/>
 
-		Time Of Cost : " . $costoftime . "<br/>
 		Profession : " . $profession . "<br/>
 		Stack : " . $stack . "<br/>
 		Tech : " . $tech . "<br/>
 		Experience : " . $experience . "<br/>
-
-
-		To change your password : You can change your password once you login.";
+		
+		<h2>Time Of Cost : " . $costoftime . "</h2><br/>
+		
+		Creative Squad cost :" . $res[0]->min . "-" . $res[0]->max . "<br>
+			France Cost :" . $res[0]->frc_min . " - " . $res[0]->frc_max;
 
 		$data['to'] = $email;
 
@@ -116,9 +117,9 @@ class Front extends User_Controller
 
 		$asd = sendMail($data);
 		if ($asd) {
-			return true;
+			return "true";
 		} else {
-			return false;
+			return "false";
 		}
 		exit;
 	}
@@ -127,36 +128,28 @@ class Front extends User_Controller
 	public function contactDetailSend()
 	{
 
-		echo "<pre>";
-		print_r($this->input->post());
-		exit;
-		$email = $this->input->post('email');
-		$costoftime = $this->input->post('costoftime');
-		$profession = $this->input->post('profession');
-		$stack = $this->input->post('stack');
-		$tech = $this->input->post('tech');
-		$experience = $this->input->post('experience');
 
-		$res = $this->this_model->getexperienceWisePayToSendMail($this->input->post());
+		$name = $this->input->post('name');
+		$contact_email = $this->input->post('contact_email');
+		$phone_number = $this->input->post('phone_number');
+		$country = $this->input->post('country');
+		$message = $this->input->post('message');
 
 
-		$message = "Email : " . $email . "<br/>
-		Estimation Cost :<br/>
+		$messages =
+			"Name : " . $name . "<br/>
+		Email : " . $contact_email . "<br/>
+		Contact Email : " . $contact_email . "<br/>
+		Phone Number : " . $phone_number . "<br/>
+		Country : " . $country . "<br/>
+		Message : " . $message . "<br/>
+		";
 
-		Time Of Cost : " . $costoftime . "<br/>
-		Profession : " . $profession . "<br/>
-		Stack : " . $stack . "<br/>
-		Tech : " . $tech . "<br/>
-		Experience : " . $experience . "<br/>
+		$data['to'] = $contact_email;
 
+		$data['subject'] = 'Connect with us';
 
-		To change your password : You can change your password once you login.";
-
-		$data['to'] = $email;
-
-		$data['subject'] = 'Custom Development Cost Estimation Based on Your Selections';
-
-		$data['message'] = $message;
+		$data['message'] = $messages;
 
 		$asd = sendMail($data);
 		if ($asd) {
