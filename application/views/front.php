@@ -731,7 +731,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer-btn">
-                                <button type='submit' id="sentContactMail" class="btn btn-primary">Submit</button>
+                                <!-- <button type='submit' id="sentContactMail" class="btn btn-primary">Submit</button> -->
                                 <button type='button' id="sentContactMail" class="btn btn-primary">Send Message</button>
                             </div>
                         </form>
@@ -741,8 +741,5 @@
         </div>
     </div>
 
-
-
 </body>
-
 </html>
