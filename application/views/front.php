@@ -344,7 +344,9 @@
     </section>
 
     <input type="hidden" id="base_url" value="<?= base_url() ?>">
+
     <script src="<?= base_url() ?>public/admin/assets/js/app.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -419,7 +421,7 @@
                     <div class="row">
                         <input class="form-control" id="email" type="email" name="email" placeholder="Please enter your email">
                         <p class="text-danger email_error"></p>
-                        <button type="button" id="sentMail" class="btn btn-primary">Sent Email</button>
+                        <button type="button" id="sentMail" class="btn btn-primary">Send Email</button>
                     </div>
                     <hr>
                     <div class="row">
@@ -433,11 +435,11 @@
 
                                 foreach (countryList() as  $key => $value) {
                                 ?>
-                                    <option value="<?= $key ?>"><?= $value ?></option>
+                                    <option value="<?= $value ?>"><?= $value ?></option>
                                 <?php } ?>
                             </select>
                             <textarea class="form-control" id="message" name="message" id="" cols="30" rows="10"></textarea>
-                            <button type='button' id="sentContactMail" class="btn btn-primary">Sent Email</button>
+                            <button type='button' id="sentContactMail">Send Email</button>
 
 
                         </form>

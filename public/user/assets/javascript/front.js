@@ -236,12 +236,8 @@ $(document).on("click", "#sentMail", function () {
 		}
 	});
 
-	if (
-		profession_id.length != "" &&
-		stack_id.length != "" &&
-		experience_id.length != "" &&
-		costoftime.length != ""
-	) {
+	if (!profession_id && !stack_id && !experience_id && !costoftime) {
+		$(this).text("Sending...");
 		$.ajax({
 			method: "POST",
 			url: base_url + "front/sendemail",
@@ -258,23 +254,27 @@ $(document).on("click", "#sentMail", function () {
 				experience: experience,
 			},
 			success: function (output) {
-				console.log(output);
 				if (output == "true") {
-					$("#exampleModal").hide();
-					$(".modal-backdrop").add("show");
-					setTimeout(function () {
-						toastr.success(
-							"Email is sent successfully to our representetive",
-							"Success"
-						);
-					}, 1000);
-				} else {
-					location.reload();
+					$(this).text("Send Email");
+
+					$("#exampleModal").modal("hide");
+
+					toastr.success(
+						"Email is sent successfully to our representetive",
+						"Success"
+					);
+				} else if (output == "false") {
+					$("#exampleModal").modal("hide");
 
 					toastr.error("Something went wrong", "Error");
 				}
 			},
 		});
+	} else {
+		// $("#exampleModal").modal("hide");
+		// $("#exampleModal").hide();
+		$("#exampleModal").modal("hide");
+		toastr.error("Please select project details", "Error");
 	}
 });
 
@@ -328,7 +328,8 @@ $(document).ready(function () {
 		},
 	});
 
-	$("#sentContactMail").click(function () {
+	$(document).on("click", "#sentContactMail", function (e) {
+		e.preventDefault();
 		if ($("#contactForm").valid()) {
 			$.ajax({
 				method: "POST",
@@ -337,16 +338,13 @@ $(document).ready(function () {
 
 				success: function (output) {
 					if (output == "true") {
-						$("#exampleModal").hide();
-						$(".modal-backdrop").add("show");
-						setTimeout(function () {
-							toastr.success(
-								"Email is sent successfully to our representetive",
-								"Success"
-							);
-						}, 1000);
-					} else {
-						location.reload();
+						$("#exampleModal").modal("hide");
+						toastr.success(
+							"Email is sent successfully to our representetive",
+							"Success"
+						);
+					} else if (output == "false") {
+						$("#exampleModal").modal("hide");
 
 						toastr.error("Something went wrong", "Error");
 					}
