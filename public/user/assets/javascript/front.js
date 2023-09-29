@@ -236,8 +236,19 @@ $(document).on("click", "#sentMail", function () {
 		}
 	});
 
-	if (!profession_id && !stack_id && !experience_id && !costoftime) {
+	if (
+		profession_id !== undefined &&
+		stack_id !== undefined &&
+		experience_id !== undefined &&
+		costoftime !== undefined &&
+		profession_id.trim() !== "" &&
+		stack_id.trim() !== "" &&
+		experience_id.trim() !== "" &&
+		costoftime.trim() !== ""
+	) {
 		$(this).text("Sending...");
+
+		$(this).attr("disabled", true);
 		$.ajax({
 			method: "POST",
 			url: base_url + "front/sendemail",
@@ -255,25 +266,24 @@ $(document).on("click", "#sentMail", function () {
 			},
 			success: function (output) {
 				if (output == "true") {
-					$(this).text("Send Email");
-
-					$("#exampleModal").modal("hide");
-
+					$("#sentMail").text("Send");
+					$("#sentMail").attr("disabled", false);
+					$("#exampleModal").hide();
+					$(".modal-backdrop").remove();
 					toastr.success(
 						"Email is sent successfully to our representetive",
 						"Success"
 					);
 				} else if (output == "false") {
-					$("#exampleModal").modal("hide");
-
+					$("#exampleModal").hide();
+					$(".modal-backdrop").remove();
 					toastr.error("Something went wrong", "Error");
 				}
 			},
 		});
 	} else {
-		// $("#exampleModal").modal("hide");
-		// $("#exampleModal").hide();
-		$("#exampleModal").modal("hide");
+		$("#exampleModal").hide();
+		$(".modal-backdrop").remove();
 		toastr.error("Please select project details", "Error");
 	}
 });
@@ -331,6 +341,9 @@ $(document).ready(function () {
 	$(document).on("click", "#sentContactMail", function (e) {
 		e.preventDefault();
 		if ($("#contactForm").valid()) {
+			$(this).text("Sending...");
+
+			$(this).attr("disabled", true);
 			$.ajax({
 				method: "POST",
 				url: base_url + "front/contactDetailSend",
@@ -338,13 +351,19 @@ $(document).ready(function () {
 
 				success: function (output) {
 					if (output == "true") {
-						$("#exampleModal").modal("hide");
+						$("#sentContactMail").text("Send Message");
+
+						$("#sentContactMail").attr("disabled", false);
+
+						$("#exampleModal").hide();
+						$(".modal-backdrop").remove();
 						toastr.success(
 							"Email is sent successfully to our representetive",
 							"Success"
 						);
 					} else if (output == "false") {
-						$("#exampleModal").modal("hide");
+						$("#exampleModal").hide();
+						$(".modal-backdrop").remove();
 
 						toastr.error("Something went wrong", "Error");
 					}
