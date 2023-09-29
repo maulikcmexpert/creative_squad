@@ -44,6 +44,249 @@
         body {
             top: 0 !important;
         }
+
+        .modal-dialog {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px !important;
+        }
+
+        .modal-dialog .modal-content {
+            width: 800px;
+            min-width: 800px;
+            max-width: 800px;
+            border-radius: 50px;
+            border: 1px solid #E9B6FF;
+            background: #FFF;
+            padding: 30px;
+        }
+
+        .modal-content .close {
+            border-radius: 50%;
+            background: #E9B6FF;
+            box-shadow: 0px 10px 30px 0px rgba(233, 182, 255, 0.15);
+            width: 100%;
+            max-width: 30px;
+            height: 30px;
+            border: none !important;
+            color: #5F0087 !important;
+        }
+
+        .modal-header {
+            border-bottom: none !important;
+            padding: 0px !important;
+        }
+
+        .modal-body {
+            padding: 0px !important;
+        }
+
+        .modal-main-wrp {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .modal-main-wrp:last-child {
+            padding-bottom: 0px !important;
+        }
+
+        .modal-main-wrp input {
+            border-radius: 90px;
+            border: 1px solid #DADAD2;
+            background: #FFF;
+            height: 45px;
+            padding-left: 20px;
+            color: #685D6D !important;
+            font-family: "Gordita";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .modal-main-wrp input:focus {
+            box-shadow: none !important;
+            border: 1px solid #E9B6FF !important;
+        }
+
+        .modal-main-wrp select {
+            border-radius: 90px;
+            border: 1px solid #DADAD2;
+            height: 45px;
+            padding-left: 20px;
+            color: #685D6D !important;
+            font-family: "Gordita";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .modal-main-wrp select:focus {
+            box-shadow: none !important;
+            border: 1px solid #E9B6FF !important;
+        }
+
+        .modal-main-wrp input::placeholder {
+            color: #685D6D !important;
+            font-family: "Gordita";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .modal-main-wrp textarea {
+            border-radius: 20px;
+            border: 1px solid #DADAD2;
+            background: #FFF;
+            height: 100px;
+            padding-left: 20px;
+            padding-top: 10px;
+            color: #685D6D !important;
+            font-family: "Gordita";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .modal-main-wrp textarea::placeholder {
+            color: #685D6D !important;
+            font-family: "Gordita";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .modal-main-wrp textarea:focus {
+            box-shadow: none !important;
+            border: 1px solid #E9B6FF !important;
+        }
+
+        .modal-main-wrp button {
+            border-radius: 90px;
+            background: #E9B6FF !important;
+            box-shadow: 0px 10px 30px 0px rgba(233, 182, 255, 0.15);
+            color: #5F0087 !important;
+            font-family: "Gordita";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 80%;
+            border: 1px solid transparent !important;
+            padding: 15px 30px;
+            margin-top: 20px;
+            text-transform: capitalize;
+        }
+
+        .modal-main-wrp button:focus {
+            box-shadow: none !important;
+        }
+
+        .modal-main-wrp-1 button {
+            display: block;
+            margin-left: auto;
+            margin-top: 0px !important;
+            padding: 15px 40px;
+        }
+
+        .modal-main-wrp-1 {
+            border-bottom: 2px solid #E9B6FF;
+
+        }
+
+        .modal-main-wrp-2 button {}
+
+        .modal-main-wrp .error {
+            color: #685D6D;
+            font-family: "Gordita";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 0px;
+        }
+
+        .modal-main-wrp-2 form .form-wrp {
+            margin-bottom: 20px;
+        }
+
+        .modal-main-wrp .iti--separate-dial-code .iti__selected-flag {
+            border-radius: 90px 0px 0px 90px;
+            background-color: #E9B6FF !important;
+        }
+
+        .modal-main-wrp .iti--separate-dial-code .iti__selected-dial-code {
+            color: #5F0087;
+            font-family: "Gordita";
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+
+        .modal-main-wrp .iti {
+            width: 100%;
+        }
+
+        .modal-footer-btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .modal-footer-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media only screen and (max-width: 1199px) {
+            .modal-dialog .modal-content {
+                width: 600px;
+                min-width: 600px;
+                max-width: 600px;
+                border-radius: 30px;
+            }
+        }
+
+        @media only screen and (max-width: 991px) {
+            .modal-dialog .modal-content {
+                width: 600px;
+                min-width: 600px;
+                max-width: 600px;
+                border-radius: 30px;
+                max-height: 500px;
+                overflow-y: scroll;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .modal-dialog .modal-content {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                border-radius: 30px;
+            }
+
+            .modal-main-wrp-1 button {
+                margin-top: 20px !important;
+            }
+        }
+
+        @media only screen and (max-width: 575px) {
+            .modal-dialog {
+                width: auto;
+            }
+        }
+
+        @media only screen and (max-width: 424px) {
+            .modal-footer-btn {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .modal-main-wrp-2 button {
+                margin-top: 0px !important;
+            }
+        }
     </style>
 
 </head>
@@ -62,9 +305,6 @@
             </div>
 
             <div class="row">
-
-
-
                 <div class="col-xxl-6 col-xl-6 col-lg-6 d-flex align-items-center">
                     <div class="hero-content">
                         <h1>Simulateur de coûts par CreativeSquad</h1>
@@ -214,7 +454,8 @@
                             <img src="<?= base_url() ?>public/user/assets/imges/monthly-top-right.svg" alt="monthly-top-right" class="monthly-top-right">
                             <img src="<?= base_url() ?>public/user/assets/imges/montly-bottom-left.svg" alt="montly-bottom-left" class="montly-bottom-left">
                             <h4>Coût mensuel</h4>
-                            <h3 class='fill_info'><span><i class="fa-solid fa-euro-sign"></i></span> Remplir les informations</h3>
+                            <h3 class='fill_info'><span><i class="fa-solid fa-euro-sign"></i></span> Remplir les
+                                informations</h3>
                             <div class="cost-wrap d-none">
                                 <div class="cost-box">
                                     <div class="d-flex justify-content-center" id="creativesquad-pr">
@@ -260,7 +501,8 @@
                             <img src="<?= base_url() ?>public/user/assets/imges/monthly-top-right.svg" alt="monthly-top-right" class="monthly-top-right">
                             <img src="<?= base_url() ?>public/user/assets/imges/montly-bottom-left.svg" alt="montly-bottom-left" class="montly-bottom-left">
                             <h4>Coût annuel</h4>
-                            <h3 class='fill_info'><span><i class="fa-solid fa-euro-sign"></i></span> Remplir les informations</h3>
+                            <h3 class='fill_info'><span><i class="fa-solid fa-euro-sign"></i></span> Remplir les
+                                informations</h3>
                             <div class="cost-wrap d-none">
                                 <div class="cost-box">
 
@@ -319,7 +561,8 @@
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6">
                     <h4>Le marché de l'embauche à distance</h4>
-                    <p>Mettre en relation les entreprises avec les meilleurs talents mondiaux afin d’aider les ingénieurs et les recruteurs à constituer plus rapidement des équipes techniques.</p>
+                    <p>Mettre en relation les entreprises avec les meilleurs talents mondiaux afin d’aider les
+                        ingénieurs et les recruteurs à constituer plus rapidement des équipes techniques.</p>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6">
                     <h4>Réseaux sociaux</h4>
@@ -346,9 +589,10 @@
     <input type="hidden" id="base_url" value="<?= base_url() ?>">
 
     <script src="<?= base_url() ?>public/admin/assets/js/app.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -358,13 +602,15 @@
     if (!empty($js)) {
         foreach ($js as $value) {
     ?>
-            <script src="<?php echo base_url(); ?>public/user/assets/javascript/<?php echo $value ?>" type="text/javascript"></script>
+            <script src="<?php echo base_url(); ?>public/user/assets/javascript/<?php echo $value ?>" type="text/javascript">
+            </script>
     <?php
         }
     }
     ?>
 
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -413,40 +659,56 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="modal-main-wrp modal-main-wrp-1">
+                        <div class="row">
+                            <div class="col-xxl-10 col-lg-9 col-md-9">
+                                <input class="form-control" id="email" type="email" name="email" placeholder="Please enter your email">
+                                <p class="text-danger email_error error"></p>
+                            </div>
+                            <div class="col-xxl-2 col-lg-3 col-md-3">
+                                <button type="button" id="sentMail" class="btn btn-primary">Send</button>
+                            </div>
+                        </div>
 
-                    <div class="row">
-                        <input class="form-control" id="email" type="email" name="email" placeholder="Please enter your email">
-                        <p class="text-danger email_error"></p>
-                        <button type="button" id="sentMail" class="btn btn-primary">Send Email</button>
+
                     </div>
-                    <hr>
-                    <div class="row">
+                    <div class="modal-main-wrp modal-main-wrp-2">
                         <form action="" id="contactForm">
-                            <input class="form-control" id="name" type="text" name="name" placeholder="Name">
-                            <input class="form-control" id="email" type="email" name="contact_email" placeholder="Email">
-                            <input type="text" id="mobile_code" class="form-control" placeholder="Phone Number" name="phone_number">
-                            <select class="form-control" id="country" name="country">
-                                <option value="">Select a Country</option>
-                                <?php
+                            <div class="row">
+                                <div class="col-xxl-6 col-lg-6 form-wrp">
+                                    <input class="form-control" id="name" type="text" name="name" placeholder="Name">
+                                </div>
+                                <div class="col-xxl-6 col-lg-6 form-wrp">
+                                    <input class="form-control" id="email" type="email" name="contact_email" placeholder="Email">
+                                </div>
+                                <div class="col-xxl-6 col-lg-6 form-wrp">
+                                    <input type="text" id="mobile_code" class="form-control" placeholder="Phone Number" name="phone_number">
+                                </div>
+                                <div class="col-xxl-6 col-lg-6 form-wrp">
+                                    <select class="form-control form-select" id="country" name="country">
+                                        <option value="">Select a Country</option>
+                                        <?php
 
-                                foreach (countryList() as  $key => $value) {
-                                ?>
-                                    <option value="<?= $value ?>"><?= $value ?></option>
-                                <?php } ?>
-                            </select>
-                            <textarea class="form-control" id="message" name="message" id="" cols="30" rows="10"></textarea>
-                            <button type='button' id="sentContactMail">Send Email</button>
-
-
+                                        foreach (countryList() as  $key => $value) {
+                                        ?>
+                                            <option value="<?= $key ?>"><?= $value ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                                <div class="col-xxl-12 col-lg-12 form-wrp">
+                                    <textarea class="form-control" id="message" name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer-btn">
+                                <button type='submit' id="sentContactMail" class="btn btn-primary">Submit</button>
+                                <button type='button' id="sentContactMail" class="btn btn-primary">Send Message</button>
+                            </div>
                         </form>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
