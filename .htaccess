@@ -1,6 +1,6 @@
 RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/calculator
+RewriteCond %{REQUEST_URI} ^/creative_squad
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /calculator/index.php?$1 [L]
+RewriteRule ^(.*)$ /creative_squad/index.php?$1 [L]
 
