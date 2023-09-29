@@ -237,6 +237,22 @@
             align-items: center;
             gap: 10px;
         }
+        .form-wrp p{
+            color: #685D6D;
+            font-family: "Gordita";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 5px;
+        }
+        .form-wrp span, .form-wrp a{
+            color: #5F0087;
+            font-family: "Gordita";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-decoration: none !important;
+        } 
 
         @media only screen and (max-width: 1199px) {
             .modal-dialog .modal-content {
@@ -702,6 +718,11 @@
                                 <div class="col-xxl-12 col-lg-12 form-wrp">
                                     <textarea class="form-control" id="message" name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
                                 </div>
+                                <div class="col-xxl-12 col-lg-12 form-wrp">
+                                    <p>Email: <a href="mailto:example@example.com">123@example.com</a></p>
+                                    <p>Telephone: <span>+1 (123) 456-7890</span></p>
+                                </div>
+
                             </div>
                             <div class="modal-footer-btn">
                                 <!-- <button type='submit' id="sentContactMail" class="btn btn-primary">Submit</button> -->
