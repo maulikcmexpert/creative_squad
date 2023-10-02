@@ -106,8 +106,8 @@ class Front extends User_Controller
 		
 		<h2>Time Of Cost : " . $costoftime . "</h2><br/>
 		
-		Creative Squad cost :" . $res[0]->min . "-" . $res[0]->max . "<br>
-			France Cost :" . $res[0]->frc_min . " - " . $res[0]->frc_max;
+		Creative Squad cost :" . $res[0]->min . " € -" . $res[0]->max . " €<br>
+			France Cost :" . $res[0]->frc_min . " € - " . $res[0]->frc_max . ' €';
 
 		$data['to'] = $email;
 
