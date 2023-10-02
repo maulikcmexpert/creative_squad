@@ -307,9 +307,9 @@
 
         @media only screen and (max-width: 1199px) {
             .modal-dialog .modal-content {
-                width: 600px;
-                min-width: 600px;
-                max-width: 600px;
+                width: 800px;
+                min-width: 800px;
+                max-width: 800px;
                 border-radius: 30px;
             }
         }
@@ -341,6 +341,11 @@
         @media only screen and (max-width: 575px) {
             .modal-dialog {
                 width: auto;
+            }
+            .static-content{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
         }
 
@@ -735,10 +740,10 @@
                     <div class="modal-main-wrp modal-main-wrp-1">
                         <form action="" id="requestToConnect">
                             <div class="row">
-                                <div class="col-xxl-10 col-lg-9 col-md-9">
+                                <div class="col-xxl-9 col-lg-9 col-md-8">
                                     <input class="form-control" id="email" type="email" name="email" placeholder="Please enter your email">
                                 </div>
-                                <div class="col-xxl-2 col-lg-3 col-md-3">
+                                <div class="col-xxl-3 col-lg-3 col-md-4">
                                     <button type="button" id="sentMail" class="btn btn-primary">Send</button>
                                 </div>
                             </div>
