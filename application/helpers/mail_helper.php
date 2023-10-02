@@ -24,8 +24,8 @@ function sendMail($data)
     $CI->load->library('email', $config);
     $CI->email->initialize($config);
     $CI->email->set_newline("\r\n");
-    $CI->email->from('maulik.cmexpertise@gmail.com', 'Creative Squad');
-    $CI->email->to($data['to']);
+    $CI->email->from($data['from'], 'Inquiry');
+    $CI->email->to('contact@creativesquad.fr');
     $CI->email->subject($data['subject']);
     $CI->email->message($data['message']);
 

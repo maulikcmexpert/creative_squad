@@ -109,7 +109,7 @@ class Front extends User_Controller
 		Creative Squad cost :" . $res[0]->min . " € -" . $res[0]->max . " €<br>
 			France Cost :" . $res[0]->frc_min . " € - " . $res[0]->frc_max . ' €';
 
-		$data['to'] = $email;
+		$data['from'] = $email;
 
 		$data['subject'] = 'Custom Development Cost Estimation Based on Your Selections';
 
@@ -145,7 +145,7 @@ class Front extends User_Controller
 		Message : " . $message . "<br/>
 		";
 
-		$data['to'] = $contact_email;
+		$data['from'] = $contact_email;
 
 		$data['subject'] = 'Connect with us';
 
