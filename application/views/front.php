@@ -64,20 +64,20 @@
             min-width: 800px;
             max-width: 800px;
             border-radius: 50px;
-            border: 1px solid #E9B6FF;
+            border: 1px solid var(--secondry);
             background: #FFF;
             padding: 30px;
         }
 
         .modal-content .close {
             border-radius: 50%;
-            background: #E9B6FF;
+            background: var(--secondry);
             box-shadow: 0px 10px 30px 0px rgba(233, 182, 255, 0.15);
             width: 100%;
             max-width: 30px;
             height: 30px;
             border: none !important;
-            color: #5F0087 !important;
+            color: var(--primary) !important;
         }
 
         .modal-header {
@@ -105,15 +105,15 @@
             height: 45px;
             padding-left: 20px;
             color: #685D6D !important;
-            font-family: "Gordita";
+            font-family: var(--Gordita-regular);
             font-size: 14px;
-            font-weight: 400;
+            /* font-weight: 400; */
             line-height: 20px;
         }
 
         .modal-main-wrp input:focus {
             box-shadow: none !important;
-            border: 1px solid #E9B6FF !important;
+            border: 1px solid var(--secondry) !important;
         }
 
         .modal-main-wrp select {
@@ -122,22 +122,22 @@
             height: 45px;
             padding-left: 20px;
             color: #685D6D !important;
-            font-family: "Gordita";
+            font-family: var(--Gordita-regular);
             font-size: 14px;
-            font-weight: 400;
+            /* font-weight: 400; */
             line-height: 20px;
         }
 
         .modal-main-wrp select:focus {
             box-shadow: none !important;
-            border: 1px solid #E9B6FF !important;
+            border: 1px solid var(--secondry) !important;
         }
 
         .modal-main-wrp input::placeholder {
             color: #685D6D !important;
-            font-family: "Gordita";
+            font-family: var(--Gordita-regular);
             font-size: 14px;
-            font-weight: 400;
+            /* font-weight: 400; */
             line-height: 20px;
         }
 
@@ -149,33 +149,33 @@
             padding-left: 20px;
             padding-top: 10px;
             color: #685D6D !important;
-            font-family: "Gordita";
+            font-family: var(--Gordita-regular);
             font-size: 14px;
-            font-weight: 400;
+            /* font-weight: 400; */
             line-height: 20px;
         }
 
         .modal-main-wrp textarea::placeholder {
             color: #685D6D !important;
-            font-family: "Gordita";
+            font-family: var(--Gordita-regular);
             font-size: 14px;
-            font-weight: 400;
+            /* font-weight: 400; */
             line-height: 20px;
         }
 
         .modal-main-wrp textarea:focus {
             box-shadow: none !important;
-            border: 1px solid #E9B6FF !important;
+            border: 1px solid var(--secondry) !important;
         }
 
         .modal-main-wrp button {
             border-radius: 90px;
-            background: #E9B6FF !important;
+            background: var(--secondry) !important;
             box-shadow: 0px 10px 30px 0px rgba(233, 182, 255, 0.15);
-            color: #5F0087 !important;
-            font-family: "Gordita";
+            color: var(--primary) !important;
+            font-family: var(--Gordita-bold);
             font-size: 16px;
-            font-weight: 700;
+            /* font-weight: 700; */
             line-height: 80%;
             border: 1px solid transparent !important;
             padding: 15px 30px;
@@ -195,7 +195,7 @@
         }
 
         .modal-main-wrp-1 {
-            border-bottom: 2px solid #E9B6FF;
+            border-bottom: 2px solid var(--secondry);
 
         }
 
@@ -203,9 +203,9 @@
 
         .modal-main-wrp .error {
             color: #685D6D;
-            font-family: "Gordita";
+            font-family: var(--Gordita-regular);
             font-size: 14px;
-            font-weight: 400;
+            /* font-weight: 400; */
             line-height: 24px;
             margin-bottom: 0px;
         }
@@ -216,13 +216,13 @@
 
         .modal-main-wrp .iti--separate-dial-code .iti__selected-flag {
             border-radius: 90px 0px 0px 90px;
-            background-color: #E9B6FF !important;
+            background-color: var(--secondry) !important;
             height: 45px;
         }
 
         .modal-main-wrp .iti--separate-dial-code .iti__selected-dial-code {
-            color: #5F0087;
-            font-family: "Gordita";
+            color: var(--primary);
+            font-family: var(--Gordita-medium);
             font-size: 14px;
             font-weight: 600;
             line-height: 24px;
@@ -250,7 +250,7 @@
             gap: 30px;
             padding-top: 30px;
             padding-bottom: 30px;
-            border-top: 2px solid #E9B6FF;
+            border-top: 2px solid var(--secondry);
         }
 
         /* .modal-main-wrp-2 form .form-wrp:last-child{
@@ -262,9 +262,9 @@
 
         .static-content p {
             color: #685D6D;
-            font-family: "Gordita";
+            font-family: var(--Gordita-regular);
             font-size: 16px;
-            font-weight: 400;
+            /* font-weight: 400; */
             line-height: 24px;
             margin-bottom: 0px;
         }
@@ -279,8 +279,8 @@
 
         .static-content p span,
         .static-content p a {
-            color: #5F0087;
-            font-family: "Gordita";
+            color: var(--primary);
+            font-family: var(--Gordita-medium);
             font-size: 16px;
             font-weight: 500;
             line-height: 24px;
