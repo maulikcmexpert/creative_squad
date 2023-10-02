@@ -397,4 +397,8 @@ $(document).on("click", ".close", function () {
 	$("input").val("");
 	$("textarea").val("");
 	$("#country").prop("selectedIndex", 0);
+	$("#requestToConnect").validate().resetForm();
+	$("#requestToConnect").find(".error").removeClass("error");
+	$("#contactForm").validate().resetForm();
+	$("#contactForm").find(".error").removeClass("error");
 });

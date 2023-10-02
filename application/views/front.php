@@ -433,8 +433,8 @@
                                 </div>
                                 <div class="col-xxl-12 col-lg-12">
                                     <div class="static-content">
-                                        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:example@example.com">123@example.com</a></p>
-                                        <p><i class="fa-solid fa-phone"></i> <span>+1 (123) 456-7890</span></p>
+                                        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:contact@creativesquad.fr">contact@creativesquad.fr</a></p>
+                                        <p><i class="fa-solid fa-phone"></i> <span>+33 4 65 84 37 28</span></p>
                                     </div>
                                 </div>
 
